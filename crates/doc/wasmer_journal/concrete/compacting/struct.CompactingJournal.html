@@ -6,7 +6,7 @@
     &amp;self,
     inner: J,
 ) -&gt; <a class="struct" href="../../struct.FilteredJournal.html" title="struct wasmer_journal::FilteredJournal">FilteredJournal</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.92.0/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="type" href="../../type.DynWritableJournal.html" title="type wasmer_journal::DynWritableJournal">DynWritableJournal</a>&gt;, <a class="struct" href="https://doc.rust-lang.org/1.92.0/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="type" href="../../type.DynReadableJournal.html" title="type wasmer_journal::DynReadableJournal">DynReadableJournal</a>&gt;&gt;<div class="where">where
-    J: <a class="trait" href="../../trait.Journal.html" title="trait wasmer_journal::Journal">Journal</a>,</div></h4></section></summary><div class="docblock"><p>Creates a filter jounral which will write all
+    J: <a class="trait" href="../../trait.Journal.html" title="trait wasmer_journal::Journal">Journal</a>,</div></h4></section></summary><div class="docblock"><p>Creates a filter journal which will write all
 its events to an inner journal</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.create_split_filter" class="method"><a class="src rightside" href="../../../src/wasmer_journal/concrete/compacting.rs.html#408-414">Source</a><h4 class="code-header">pub fn <a href="#method.create_split_filter" class="fn">create_split_filter</a>&lt;W, R&gt;(
     &amp;self,

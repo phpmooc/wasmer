@@ -5,7 +5,7 @@
 }</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Subgroup of events that may or may not be retained in the
 final journal as it is compacted.</p>
 <p>By grouping events into subevents it makes it possible to ignore an
-entire subgroup of events which are superseeded by a later event. For
+entire subgroup of events which are superseded by a later event. For
 example, all the events involved in creating a file are irrelevant if
 that file is later deleted.</p>
 </div></details><h2 id="fields" class="fields section-header">Fields<a href="#fields" class="anchor">§</a></h2><span id="structfield.events" class="structfield section-header"><a href="#structfield.events" class="anchor field">§</a><code>events: <a class="struct" href="https://doc.rust-lang.org/1.92.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.92.0/std/primitive.usize.html">usize</a>&gt;</code></span><div class="docblock"><p>List of all the events that will be transferred over
