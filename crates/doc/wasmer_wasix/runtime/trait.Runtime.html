@@ -14,14 +14,14 @@
         &amp;self,
         _module: &amp;<a class="struct" href="../syscalls/struct.Module.html" title="struct wasmer_wasix::syscalls::Module">Module</a>,
         _store: &amp;mut StoreMut&lt;'_&gt;,
-    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Imports&gt; { ... }
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.103/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Imports&gt; { ... }
 <span class="item-spacer"></span>    fn <a href="#method.configure_new_instance" class="fn">configure_new_instance</a>(
         &amp;self,
         _module: &amp;<a class="struct" href="../syscalls/struct.Module.html" title="struct wasmer_wasix::syscalls::Module">Module</a>,
         _store: &amp;mut StoreMut&lt;'_&gt;,
         _instance: &amp;<a class="struct" href="../syscalls/struct.Instance.html" title="struct wasmer_wasix::syscalls::Instance">Instance</a>,
         _imported_memory: <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../syscalls/struct.Memory.html" title="struct wasmer_wasix::syscalls::Memory">Memory</a>&gt;,
-    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.94.1/std/primitive.unit.html">()</a>&gt; { ... }
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.103/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.94.1/std/primitive.unit.html">()</a>&gt; { ... }
 <span class="item-spacer"></span>    fn <a href="#method.http_client" class="fn">http_client</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="type" href="../http/type.DynHttpClient.html" title="type wasmer_wasix::http::DynHttpClient">DynHttpClient</a>&gt; { ... }
 <span class="item-spacer"></span>    fn <a href="#method.tty" class="fn">tty</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;(dyn <a class="trait" href="../os/tty/trait.TtyBridge.html" title="trait wasmer_wasix::os::tty::TtyBridge">TtyBridge</a> + <a class="trait" href="https://doc.rust-lang.org/1.94.1/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + <a class="trait" href="https://doc.rust-lang.org/1.94.1/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a>)&gt; { ... }
 <span class="item-spacer"></span>    fn <a href="#method.resolve_module" class="fn">resolve_module</a>&lt;'a&gt;(
@@ -80,7 +80,7 @@
     &amp;self,
     _module: &amp;<a class="struct" href="../syscalls/struct.Module.html" title="struct wasmer_wasix::syscalls::Module">Module</a>,
     _store: &amp;mut StoreMut&lt;'_&gt;,
-) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Imports&gt;</h4></section></summary><div class="docblock"><p>Create additional imports for a new WASIX instance in the provided store.</p>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.103/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Imports&gt;</h4></section></summary><div class="docblock"><p>Create additional imports for a new WASIX instance in the provided store.</p>
 <p>This callback may be invoked multiple times (e.g. process bootstrap,
 thread spawn), so implementations should create imports that are valid
 for the given store each time.</p>
@@ -90,7 +90,7 @@ for the given store each time.</p>
     _store: &amp;mut StoreMut&lt;'_&gt;,
     _instance: &amp;<a class="struct" href="../syscalls/struct.Instance.html" title="struct wasmer_wasix::syscalls::Instance">Instance</a>,
     _imported_memory: <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="struct" href="../syscalls/struct.Memory.html" title="struct wasmer_wasix::syscalls::Memory">Memory</a>&gt;,
-) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.102/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.94.1/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Configure an instantiated instance before initialization/startup.</p>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.103/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.94.1/std/primitive.unit.html">()</a>&gt;</h4></section></summary><div class="docblock"><p>Configure an instantiated instance before initialization/startup.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.http_client" class="method"><a class="src rightside" href="../../src/wasmer_wasix/runtime/mod.rs.html#224-226">Source</a><h4 class="code-header">fn <a href="#method.http_client" class="fn">http_client</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;<a class="type" href="../http/type.DynHttpClient.html" title="type wasmer_wasix::http::DynHttpClient">DynHttpClient</a>&gt;</h4></section></summary><div class="docblock"><p>Get a custom HTTP client</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.tty" class="method"><a class="src rightside" href="../../src/wasmer_wasix/runtime/mod.rs.html#229-231">Source</a><h4 class="code-header">fn <a href="#method.tty" class="fn">tty</a>(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/1.94.1/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;(dyn <a class="trait" href="../os/tty/trait.TtyBridge.html" title="trait wasmer_wasix::os::tty::TtyBridge">TtyBridge</a> + <a class="trait" href="https://doc.rust-lang.org/1.94.1/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + <a class="trait" href="https://doc.rust-lang.org/1.94.1/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a>)&gt;</h4></section></summary><div class="docblock"><p>Get access to the TTY used by the environment.</p>
 </div></details><details class="toggle method-toggle" open><summary><section id="method.resolve_module" class="method"><a class="src rightside" href="../../src/wasmer_wasix/runtime/mod.rs.html#239-261">Source</a><h4 class="code-header">fn <a href="#method.resolve_module" class="fn">resolve_module</a>&lt;'a&gt;(
